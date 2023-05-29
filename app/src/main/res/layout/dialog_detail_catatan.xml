@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etNoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Judul..."
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_below="@id/etNoteTitle"
+                android:id="@+id/etCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="10dp"
+                android:hint="Category..."
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etNoteBody"
+                android:layout_below="@id/etCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/llBtn"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:gravity="start|top"
+                android:hint="Catatan..."
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/llBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:background="@drawable/btn_back_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="bold"
+                    android:text="Kembali"/>
+                <Button
+                    android:id="@+id/btnSave"
+                    android:background="@drawable/btn_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Simpan"/>
+            </LinearLayout>
+        </RelativeLayout>
+</androidx.cardview.widget.CardView>
